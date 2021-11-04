@@ -1,5 +1,6 @@
 package model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Student extends Person {
@@ -11,17 +12,11 @@ public class Student extends Person {
     public Student() {
     }
 
-    public Student(long studentID, int totalCredits, List<Course> enrolledCourses) {
-        this.studentID = studentID;
-        this.totalCredits = totalCredits;
-        this.enrolledCourses = enrolledCourses;
-    }
-
-    public Student(String firstName, String lastName, long studentID, int totalCredits, List<Course> enrolledCourses) {
+    public Student(String firstName, String lastName, long studentID) {
         super(firstName, lastName);
-        this.studentID = studentID;
-        this.totalCredits = totalCredits;
-        this.enrolledCourses = enrolledCourses;
+        this.studentID = studentID; //must test to see if studentID exists
+        this.totalCredits = 0;
+        this.enrolledCourses = new ArrayList<>();
     }
 
     public long getStudentID() {
@@ -47,4 +42,9 @@ public class Student extends Person {
     public void setEnrolledCourses(List<Course> enrolledCourses) {
         this.enrolledCourses = enrolledCourses;
     }
+
+    public void addCourse(Course new_course){
+        enrolledCourses.add(new_course); //remember to add credits to student in controller (RegistrationSystem)
+    }
+
 }

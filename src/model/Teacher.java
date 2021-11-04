@@ -9,10 +9,6 @@ public class Teacher extends Person{
     public Teacher() {
     }
 
-    public Teacher(List<Course> courses) {
-        this.courses = courses;
-    }
-
     public Teacher(String firstName, String lastName, List<Course> courses) {
         super(firstName, lastName);
         this.courses = courses;
@@ -24,5 +20,18 @@ public class Teacher extends Person{
 
     public void setCourses(List<Course> courses) {
         this.courses = courses;
+    }
+
+    public void addCourse(Course new_course){
+        courses.add(new_course);
+    }
+
+    @Override
+    public String toString() {
+        return "Teacher{" +
+                "firstName=" + firstName +
+                ", lastName=" + lastName +
+                ", courses=" +  courses +
+                '}';
     }
 }
