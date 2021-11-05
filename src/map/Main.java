@@ -1,7 +1,10 @@
 package map;
 
 import model.Course;
+import model.Student;
 import model.Teacher;
+
+import java.util.ArrayList;
 
 public class Main {
 
