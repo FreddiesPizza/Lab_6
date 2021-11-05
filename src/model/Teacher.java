@@ -22,6 +22,10 @@ public class Teacher extends Person{
         this.courses = courses;
     }
 
+    /**
+     * adds a course to the teacher's list of courses
+     * @param new_course
+     */
     public void addCourse(Course new_course){
         courses.add(new_course);
     }

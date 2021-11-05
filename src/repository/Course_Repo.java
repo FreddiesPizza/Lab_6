@@ -8,6 +8,11 @@ public class Course_Repo extends InMemoryRepository<Course> {
 
     List<Course> courses;
 
+    /**
+     * updates a certain course in the repo by giving it the attributes of an as parameter given course
+     * @param obj
+     * @return the updated course
+     */
     @Override
     public Course update(Course obj) {
         Course courseToUpdate = this.repoList.stream()

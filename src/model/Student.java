@@ -43,8 +43,23 @@ public class Student extends Person {
         this.enrolledCourses = enrolledCourses;
     }
 
+    /**
+     * adds a course to the student's list of courses
+     * @param new_course
+     */
     public void addCourse(Course new_course){
         enrolledCourses.add(new_course); //remember to add credits to student in controller (RegistrationSystem)
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "firstName=" + firstName +
+                ", lastName=" + lastName +
+                ", studentID=" + studentID +
+                ", totalCredits=" + totalCredits +
+                ", enrolledCourses=" +  enrolledCourses +
+                '}';
     }
 
 }
