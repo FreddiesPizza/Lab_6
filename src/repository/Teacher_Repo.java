@@ -20,7 +20,7 @@ public class Teacher_Repo extends InMemoryRepository<Teacher> {
                 .findFirst()
                 .orElseThrow();
 
-        //teacherToUpdate.setCourses(obj.getCourses()); ##### ask about this too
+        teacherToUpdate.setCourses(obj.getCourses());
         teacherToUpdate.setFirstName(obj.getFirstName());
         teacherToUpdate.setLastName(obj.getLastName());
 

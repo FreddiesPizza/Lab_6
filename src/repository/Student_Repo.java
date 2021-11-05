@@ -20,8 +20,8 @@ public class Student_Repo extends InMemoryRepository<Student> {
                 .findFirst()
                 .orElseThrow();
 
-        //studentToUpdate.setEnrolledCourses(obj.getEnrolledCourses()); #####ask about this
-        //studentToUpdate.setTotalCredits(obj.getTotalCredits()); #####and this
+        studentToUpdate.setEnrolledCourses(obj.getEnrolledCourses());
+        studentToUpdate.setTotalCredits(obj.getTotalCredits());
         studentToUpdate.setFirstName(obj.getFirstName());
         studentToUpdate.setLastName(obj.getLastName());
 
